@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>
+		Volume Controller
+	</title>
+</head>
+<body>
+	<h1>
+		Volume Controller
+	</h1>
+	<audio autobuffer autoloop loop controls hidden="" id="audio">
+		<source src="demo.mp3">
+		
+		
+	</audio>
+	<input type="range" name="" onchange="vol()" value="" max="99" id="range" placeholder="">
+	<button onclick="document.getElementById('audio').autoplay = 'true'; ">
+		PLAY
+	</button>
+<script>
+	function vol() {
+		var audio = document.getElementById('audio');
+		var slider = 0 + "." + document.getElementById('range').value;
+		audio.volume = slider;
+			}
+</script>
+</body>
+</html>
